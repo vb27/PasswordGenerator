@@ -1,48 +1,25 @@
-# 03 JavaScript: Password Generator
+# PasswordGenerator
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+## Usage
+This is a password generator that lets the user pick the parameters of what the password can be. The parameters are length(between 8-128), uppercase letters, lowercase letters, numbers, and special characters. When prompted to the user will type in a number between 8 and 128 to define the length of the password that will be generated. Then there will be multiple confirms if you want uppercase letters, lowercase letters and so on. Once all the parameters are set in the text area a password will be generated.
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
 
-## User Story
+## Three Main Functions
+For this assignment for me it was focused around three main functions that made everything run. A function for the length of the password inputed by the user. A function that confirms what type of characters that they want to use. And finally a function to take all the information from the previous functions and create the password.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## Length
+For the first function it was fairly simple. I made a variable equa to the prompt when asked about the length of the password. Then a if else statement was used to make sure that the password was within 8 and 128 characters, if not it would restart the whole function till it got and answer within the parameters.
 
-## Acceptance Criteria
+With this function I now have the idea for how long the array of the new password will be.
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Choices
+Before any of the major choices that needed to be made. I made arrays for all of the choices that could be made so that I can reference them later.
 
-The following image demonstrates the application functionality:
+For the second function it was 4 confirms to figure out which type of characters they wanted to use. The confirms were attached to variables. The variables were then checked for their boolean value. When all false then it would restart the whole function till at least one of the values were true. After that it would take all of the true variables and then put that variables appropriate array into an empty array.
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+## New Password
+Now that we have the length of the password we want and all the characters that can be put into the password I made a for loop. The loop will keep looping as long as the length of the password and it will choose a random index from the array at the arrays length.
 
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+## Credits
+Was one of the more struggling assignments thus far and I would not have been able to finish it as fast if it wasn't for:
+Denis Molloy
